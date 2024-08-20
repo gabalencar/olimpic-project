@@ -1,0 +1,35 @@
+.navbar {
+    background-color: #004D40; /* Dark Teal color */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menuItem {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menuItem:hover {
+    background-color: #00695C; /* Lighter Teal shade for hover */
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+}

@@ -1,0 +1,15 @@
+.Home{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.AthletesContent{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
