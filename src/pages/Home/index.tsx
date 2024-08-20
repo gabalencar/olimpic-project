@@ -5,6 +5,7 @@ import './index.css'
 import NavBar from '../../components/NavBar';
 import { containsValue } from '../../utils/strings';
 import SearchComponent from '../../components/SearchComponent';
+import { LoadingSpinner } from '../../components/LoadingSpinner';
 
 interface Player {
     id: number;
@@ -24,7 +25,7 @@ export default function Home() {
 
     useEffect(() => {
        async function getData() {
-            const response = await footbal.getAllPlayersCache();
+            const response = await footbal.getAllPlayersFromATeam(6, 2024);
             const playersData = response.data;
 
             const players = playersData.response.map((playerData: { player: { id: number; name: string; photo: string; }; }) => ({
@@ -52,6 +53,7 @@ export default function Home() {
             <SearchComponent onSearch={onSearch}/>
             <div className="Home">
                 <div className="AthletesContent">
+                    {athletes.length == 0 && <LoadingSpinner />}
                     {filteredAthletes.map(player => (
                         <CardAtleta 
                             favorites={favorites}

@@ -11,7 +11,7 @@ export default function NavBar({setFilterFavorites}: NavBarProps){
             React Project
         </div>
         <ul className={"menu"}>
-            <li className={"menuItem"} onClick={() => setFilterFavorites(false)}>Página inicial</li>
+            <li className={"menuItem"} onClick={() => setFilterFavorites(false)}>Todos</li>
             <li className={"menuItem"} onClick={() => setFilterFavorites(true)}>Favoritos</li>
         </ul>
     </nav>
