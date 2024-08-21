@@ -5,9 +5,10 @@ interface CardAtletaProps {
     name: string;
     image: string;
     favorite?: boolean;
-    favorites: object;
-    setFavorites(favorites: object): void;
+    favorites: Record<string, boolean>;
+    setFavorites(favorites: Record<string, boolean>): void;
 }
+
 
 export default function CardAtleta({name, image, favorite = false, favorites, setFavorites}: CardAtletaProps){
     const toggleFavorite = () => {
